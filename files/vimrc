@@ -1,0 +1,92 @@
+"Set the style for syntax highlighting to be suited for dark backgrounds
+set background=dark "bg
+
+"Customizing search options/preferences
+set hlsearch "hls
+set incsearch "is
+set ignorecase "ic
+
+"Show line numbers at the very left of the vim buffer
+set number "nu
+
+"Apply auto line breaks at 80 characters and apply it with formatoptions
+set textwidth=76 "tw
+set formatoptions+=t "fo
+
+"Set Tab to 2 spaces
+set expandtab "et
+set tabstop=2 "ts
+
+"Set Indent to 2 spaces
+set shiftwidth=2 "sw
+
+"Comment block options
+set formatoptions+=cro "fo
+set comments=s:/**,mb:\ *,ex:\ */
+
+"Set Autoindent
+set autoindent "ai
+
+filetype plugin indent on
+
+set omnifunc=syntaxcomplete#complete
+
+"Auto Highlights Trailing Whitespace:
+"- in red color
+"- upon opening new buffers
+"- no highlight while in insert mode
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+
+
+execute pathogen#infect()
+
+"JsDoc Plugin Configurations
+let g:jsdoc_enable_es6 = 1
+let g:jsdoc_allow_input_prompt = 0
+let g:jsdoc_input_description = 0
+let g:jsdoc_additional_descriptions = 1
+let g:jsdoc_access_descriptions = 2
+let g:jsdoc_underscore_private = 1
+let g:jsdoc_param_description_separator = ' - '
+
+"Enables HTML/CSS syntax highlighting in your JavaScript file
+let g:javascript_enable_domhtmlcss = 1
+
+"Allow JSX syntax for .js extension files
+let g:jsx_ext_required = 0
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_javascript_checkers = ['eslint']
+
+" Override eslint with local version where necessary.
+let local_eslint = finddir('node_modules', '.;') . '/.bin/eslint'
+
+if matchstr(local_eslint, "^\/\\w") == ''
+  let local_eslint = getcwd() . "/" . local_eslint
+endif
+
+if executable(local_eslint)
+  let g:syntastic_javascript_eslint_exec = local_eslint
+endif
+
+"JSX Plugin   - https://github.com/mxw/vim-jsx
+"JS Plugin    - https://github.com/pangloss/vim-javascript
+"TS Plugin    - https://github.com/leafgarland/typescript-vim
+"JsDOC Plugin - https://github.com/heavenshell/vim-jsdoc
+"Syntastic    - https://github.com/scrooloose/syntastic
+"HS Syntax    - https://github.com/urso/haskell_syntax.vim
+
+"Useful reference - https://jaxbot.me/articles/setting-up-vim-for-react-js-jsx-02-03-2015
