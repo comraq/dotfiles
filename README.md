@@ -5,6 +5,10 @@ Using the .dotfiles:
 2) Run the following commands:
 
 
+
+
+
+
 mkdir -p $HOME/.dotfiles;
 
 git clone https://github.com/comraq/dotfiles.git $HOME/.dotfiles/;
