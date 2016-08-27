@@ -1,3 +1,5 @@
+"------- Basic Settings -------"
+
 "Set the style for syntax highlighting to be suited for dark backgrounds
 set background=dark "bg
 
@@ -42,6 +44,43 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
+
+
+
+
+"------- Custom Mappings -------"
+
+" <space> as leader
+let mapleader = " "
+
+" 'evc' in command mode to tabedit vimrc
+cnoremap evc tabedit $MYVIMRC<cr>
+cnoremap svc :source $MYVIMRC<cr>
+
+" Wraps highlighted text in visual mode, currently has:
+" -> single quotes '
+" -> double quotes "
+" -> square brackets [ or ]
+" -> round brackets ( or )
+" -> curly brackets { or }
+" -> angle brackets < or >
+vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>
+vnoremap <leader>' <esc>`<i'<esc>`>la'<esc>
+vnoremap <leader>[ <esc>`<i[<esc>`>la]<esc>
+vnoremap <leader>] <esc>`<i[<esc>`>la]<esc>
+vnoremap <leader>( <esc>`<i(<esc>`>la)<esc>
+vnoremap <leader>) <esc>`<i(<esc>`>la)<esc>
+vnoremap <leader>< <esc>`<i<<esc>`>la><esc>
+vnoremap <leader>> <esc>`<i<<esc>`>la><esc>
+vnoremap <leader>{ <esc>`<i{<esc>`>la}<esc>
+vnoremap <leader>} <esc>`<i{<esc>`>la}<esc>
+
+
+
+
+
+
+"------- Pathogen -------"
 
 execute pathogen#infect()
 

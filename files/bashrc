@@ -127,6 +127,7 @@ export pws=$HOME/Documents/GitHub/WebWS/phpWS
 export swk=$HOME/Documents/SchoolWork
 export lrn=$HOME/Documents/SelfLearning
 export sws=$HOME/Documents/GitHub/SchoolWS
+export plr=$HOME/Documents/pillr
 export acer=/media/adam/Acer/Users/adam
 export gnm=/usr/lib/node_modules
 export phplog=/var/log/php_errors.log
@@ -150,9 +151,13 @@ alias cprl='composer dumpautoload -o'
 alias rld='here=$(pwd); . ~/.bashrc; cd $here'
 alias hask='ghc --make'
 alias sml='rlwrap sml'
+alias sghci='stack exec ghci'
 
 # Sets the readline (terminal) mode to vi
 set -o vi
+
+# PATHs
+PATH=$PATH:~/.config/composer/vendor/bin
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
