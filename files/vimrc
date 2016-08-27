@@ -13,7 +13,6 @@ set number "nu
 
 "Apply auto line breaks at 80 characters and apply it with formatoptions
 set textwidth=76 "tw
-set formatoptions+=t "fo
 
 "Set Tab to 2 spaces
 set expandtab "et
@@ -22,12 +21,9 @@ set tabstop=2 "ts
 "Set Indent to 2 spaces
 set shiftwidth=2 "sw
 
-"Comment block options
-set formatoptions+=cro "fo
-set comments=s:/**,mb:\ *,ex:\ */
-
 "Set Autoindent
 set autoindent "ai
+
 
 filetype plugin indent on
 

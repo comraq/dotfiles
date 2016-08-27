@@ -128,6 +128,7 @@ export swk=$HOME/Documents/SchoolWork
 export lrn=$HOME/Documents/SelfLearning
 export sws=$HOME/Documents/GitHub/SchoolWS
 export plr=$HOME/Documents/pillr
+export dot=$HOME/.dotfiles
 export acer=/media/adam/Acer/Users/adam
 export gnm=/usr/lib/node_modules
 export phplog=/var/log/php_errors.log
