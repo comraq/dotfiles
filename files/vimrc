@@ -60,17 +60,24 @@ cnoremap svc :source $MYVIMRC<cr>
 " -> round brackets ( or )
 " -> curly brackets { or }
 " -> angle brackets < or >
-vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>
-vnoremap <leader>' <esc>`<i'<esc>`>la'<esc>
-vnoremap <leader>[ <esc>`<i[<esc>`>la]<esc>
-vnoremap <leader>] <esc>`<i[<esc>`>la]<esc>
-vnoremap <leader>( <esc>`<i(<esc>`>la)<esc>
-vnoremap <leader>) <esc>`<i(<esc>`>la)<esc>
-vnoremap <leader>< <esc>`<i<<esc>`>la><esc>
-vnoremap <leader>> <esc>`<i<<esc>`>la><esc>
-vnoremap <leader>{ <esc>`<i{<esc>`>la}<esc>
-vnoremap <leader>} <esc>`<i{<esc>`>la}<esc>
+vnoremap <leader>" <esc>`>a"<esc>`<i"<esc>
+vnoremap <leader>' <esc>`>a'<esc>`<i'<esc>
+vnoremap <leader>[ <esc>`>a]<esc>`<i[<esc>
+vnoremap <leader>] <esc>`>a]<esc>`<i[<esc>
+vnoremap <leader>( <esc>`>a)<esc>`<i(<esc>
+vnoremap <leader>) <esc>`>a)<esc>`<i(<esc>
+vnoremap <leader>< <esc>`>a><esc>`<i<<esc>
+vnoremap <leader>> <esc>`>a><esc>`<i<<esc>
+vnoremap <leader>{ <esc>`>a}<esc>`<i{<esc>
+vnoremap <leader>} <esc>`>a}<esc>`<i{<esc>
 
+
+
+
+
+"------- Spelling AutoCorrect Mappings -------"
+
+inoremap funciton function
 
 
 
