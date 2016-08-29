@@ -46,8 +46,11 @@ autocmd BufWinLeave * call clearmatches()
 
 "------- Custom Mappings -------"
 
-" <space> as leader
+" Let backslash be leader
 let mapleader = " "
+
+" Trims Trailing Whitespaces
+cnoremap trsp %s/\s\+$//g<cr>``
 
 " 'evc' in command mode to tabedit vimrc
 cnoremap evc tabedit $MYVIMRC<cr>
@@ -62,22 +65,123 @@ cnoremap svc :source $MYVIMRC<cr>
 " -> angle brackets < or >
 vnoremap <leader>" <esc>`>a"<esc>`<i"<esc>
 vnoremap <leader>' <esc>`>a'<esc>`<i'<esc>
-vnoremap <leader>[ <esc>`>a]<esc>`<i[<esc>
-vnoremap <leader>] <esc>`>a]<esc>`<i[<esc>
 vnoremap <leader>( <esc>`>a)<esc>`<i(<esc>
 vnoremap <leader>) <esc>`>a)<esc>`<i(<esc>
+vnoremap <leader>[ <esc>`>a]<esc>`<i[<esc>
+vnoremap <leader>] <esc>`>a]<esc>`<i[<esc>
 vnoremap <leader>< <esc>`>a><esc>`<i<<esc>
 vnoremap <leader>> <esc>`>a><esc>`<i<<esc>
 vnoremap <leader>{ <esc>`>a}<esc>`<i{<esc>
 vnoremap <leader>} <esc>`>a}<esc>`<i{<esc>
 
+" Deletes wrapping delimiters:
+nnoremap <leader>d" di"hPl2x
+nnoremap <leader>d' di'hPl2x
+nnoremap <leader>d( di(hPl2x
+nnoremap <leader>d) di(hPl2x
+nnoremap <leader>d[ di[hPl2x
+nnoremap <leader>d] di[hPl2x
+nnoremap <leader>d< di<hPl2x
+nnoremap <leader>d> di<hPl2x
+nnoremap <leader>d{ di{hPl2x
+nnoremap <leader>d} di{hPl2x
+
+" Replaces wrapping delimiters:
+nnoremap <leader>"' di"hi''<esc>P2l2x
+nnoremap <leader>"( di"hi()<esc>P2l2x
+nnoremap <leader>") di"hi()<esc>P2l2x
+nnoremap <leader>"[ di"hi[]<esc>P2l2x
+nnoremap <leader>"] di"hi[]<esc>P2l2x
+nnoremap <leader>"< di"hi<><esc>P2l2x
+nnoremap <leader>"> di"hi<><esc>P2l2x
+nnoremap <leader>"{ di"hi{}<esc>P2l2x
+nnoremap <leader>"} di"hi{}<esc>P2l2x
+
+nnoremap <leader>'" di'hi""<esc>P2l2x
+nnoremap <leader>'( di'hi()<esc>P2l2x
+nnoremap <leader>') di'hi()<esc>P2l2x
+nnoremap <leader>'[ di'hi[]<esc>P2l2x
+nnoremap <leader>'] di'hi[]<esc>P2l2x
+nnoremap <leader>'< di'hi<><esc>P2l2x
+nnoremap <leader>'> di'hi<><esc>P2l2x
+nnoremap <leader>'{ di'hi{}<esc>P2l2x
+nnoremap <leader>'} di'hi{}<esc>P2l2x
+
+nnoremap <leader>(' di(hi''<esc>P2l2x
+nnoremap <leader>(" di(hi""<esc>P2l2x
+nnoremap <leader>([ di(hi[]<esc>P2l2x
+nnoremap <leader>(] di(hi[]<esc>P2l2x
+nnoremap <leader>(< di(hi<><esc>P2l2x
+nnoremap <leader>(> di(hi<><esc>P2l2x
+nnoremap <leader>({ di(hi{}<esc>P2l2x
+nnoremap <leader>(} di(hi{}<esc>P2l2x
+nnoremap <leader>)' di(hi''<esc>P2l2x
+nnoremap <leader>)" di(hi""<esc>P2l2x
+nnoremap <leader>)[ di(hi[]<esc>P2l2x
+nnoremap <leader>)] di(hi[]<esc>P2l2x
+nnoremap <leader>)< di(hi<><esc>P2l2x
+nnoremap <leader>)> di(hi<><esc>P2l2x
+nnoremap <leader>){ di(hi{}<esc>P2l2x
+nnoremap <leader>)} di(hi{}<esc>P2l2x
+
+nnoremap <leader>[' di[hi''<esc>P2l2x
+nnoremap <leader>[" di[hi""<esc>P2l2x
+nnoremap <leader>[( di[hi()<esc>P2l2x
+nnoremap <leader>[) di[hi()<esc>P2l2x
+nnoremap <leader>[< di[hi<><esc>P2l2x
+nnoremap <leader>[> di[hi<><esc>P2l2x
+nnoremap <leader>[{ di[hi{}<esc>P2l2x
+nnoremap <leader>[} di[hi{}<esc>P2l2x
+nnoremap <leader>]' di[hi''<esc>P2l2x
+nnoremap <leader>]" di[hi""<esc>P2l2x
+nnoremap <leader>]( di[hi()<esc>P2l2x
+nnoremap <leader>]) di[hi()<esc>P2l2x
+nnoremap <leader>]< di[hi<><esc>P2l2x
+nnoremap <leader>]> di[hi<><esc>P2l2x
+nnoremap <leader>]{ di[hi{}<esc>P2l2x
+nnoremap <leader>]} di[hi{}<esc>P2l2x
+
+nnoremap <leader><' di<hi''<esc>P2l2x
+nnoremap <leader><" di<hi""<esc>P2l2x
+nnoremap <leader><( di<hi()<esc>P2l2x
+nnoremap <leader><) di<hi()<esc>P2l2x
+nnoremap <leader><[ di<hi[]<esc>P2l2x
+nnoremap <leader><] di<hi[]<esc>P2l2x
+nnoremap <leader><{ di<hi{}<esc>P2l2x
+nnoremap <leader><} di<hi{}<esc>P2l2x
+nnoremap <leader>>' di<hi''<esc>P2l2x
+nnoremap <leader>>" di<hi""<esc>P2l2x
+nnoremap <leader>>( di<hi()<esc>P2l2x
+nnoremap <leader>>) di<hi()<esc>P2l2x
+nnoremap <leader>>[ di<hi[]<esc>P2l2x
+nnoremap <leader>>] di<hi[]<esc>P2l2x
+nnoremap <leader>>{ di<hi{}<esc>P2l2x
+nnoremap <leader>>} di<hi{}<esc>P2l2x
+
+nnoremap <leader>{' di{hi''<esc>P2l2x
+nnoremap <leader>{" di{hi""<esc>P2l2x
+nnoremap <leader>{( di{hi()<esc>P2l2x
+nnoremap <leader>{) di{hi()<esc>P2l2x
+nnoremap <leader>{[ di{hi[]<esc>P2l2x
+nnoremap <leader>{] di{hi[]<esc>P2l2x
+nnoremap <leader>{< di{hi<><esc>P2l2x
+nnoremap <leader>{> di{hi<><esc>P2l2x
+nnoremap <leader>}' di{hi''<esc>P2l2x
+nnoremap <leader>}" di{hi""<esc>P2l2x
+nnoremap <leader>}( di{hi()<esc>P2l2x
+nnoremap <leader>}) di{hi()<esc>P2l2x
+nnoremap <leader>}[ di{hi[]<esc>P2l2x
+nnoremap <leader>}] di{hi[]<esc>P2l2x
+nnoremap <leader>}< di{hi<><esc>P2l2x
+nnoremap <leader>}> di{hi<><esc>P2l2x
 
 
 
 
-"------- Spelling AutoCorrect Mappings -------"
 
-inoremap funciton function
+"------- Spelling AutoCorrect Abbreviations -------
+
+iabbrev funciton function
 
 
 
