@@ -1,7 +1,6 @@
 #!/bin/sh
 
-ABSPATH=$(readlink -f "$0")
-BASEDIR=$(dirname "$ABSPATH")
+BASEDIR=$(cd "$(dirname "$0")"; pwd -P)
 
 dotfiles="$BASEDIR/files"
 

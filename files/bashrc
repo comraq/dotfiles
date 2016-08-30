@@ -158,7 +158,7 @@ alias sghci='stack exec ghci'
 set -o vi
 
 # PATHs
-PATH=$PATH:~/.config/composer/vendor/bin
+PATH=$PATH:~/.composer/vendor/bin
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
