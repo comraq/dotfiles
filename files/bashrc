@@ -150,7 +150,7 @@ alias :q=exit # Quit (emulating vim)
 alias chrome='/usr/bin/chromium-browser &'
 alias cprl='composer dumpautoload -o'
 alias rld='here=$(pwd); . ~/.bashrc; cd $here'
-alias hask='ghc --make'
+alias hask='stack ghc'
 alias sml='rlwrap sml'
 alias sghci='stack exec ghci'
 
