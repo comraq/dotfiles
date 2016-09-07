@@ -193,6 +193,20 @@ execute pathogen#infect()
 
 
 
+" GHCMod Shortcuts
+nnoremap <LEADER>hw :GhcModTypeInsert!<CR>
+nnoremap <LEADER>hs :GhcModSplitFunCase!<CR>
+nnoremap <LEADER>hq :GhcModType!<CR>
+nnoremap <LEADER>he :GhcModTypeClear!<CR>
+
+
+
+" NecoGHC For Haskell OmniCompletion
+let g:haskellmode_completion_ghc = 1
+autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+
+
+
 "JsDoc Plugin Configurations
 let g:jsdoc_enable_es6 = 1
 let g:jsdoc_allow_input_prompt = 0
@@ -215,13 +229,15 @@ let g:jsx_ext_required = 0
 
 
 " Syntastic
+nnoremap <Leader>s :SyntasticToggleMode<CR>
+
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 
 let g:syntastic_javascript_checkers = ['eslint']
@@ -252,5 +268,8 @@ let g:indentLine_color_term = 7 " See :help cterm-colors for more NR-8 Colors
 "Syntastic    - https://github.com/scrooloose/syntastic
 "HS Syntax    - https://github.com/urso/haskell_syntax.vim
 "Indent Line  - https://github.com/Yggdroot/indentLine
+"vimproc      - https://github.com/Shougo/vimproc.vim
+"ghcmod-vim   - https://github.com/eagletmt/ghcmod-vim
+"neco-ghc     - https://github.com/eagletmt/neco-ghc
 
 "Useful reference - https://jaxbot.me/articles/setting-up-vim-for-react-js-jsx-02-03-2015
