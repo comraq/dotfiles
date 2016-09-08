@@ -207,6 +207,11 @@ autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 
 
 
+"Vim-Racket
+let g:syntastic_enable_racket_racket_checker = 1
+
+
+
 "JsDoc Plugin Configurations
 let g:jsdoc_enable_es6 = 1
 let g:jsdoc_allow_input_prompt = 0
@@ -271,5 +276,6 @@ let g:indentLine_color_term = 7 " See :help cterm-colors for more NR-8 Colors
 "vimproc      - https://github.com/Shougo/vimproc.vim
 "ghcmod-vim   - https://github.com/eagletmt/ghcmod-vim
 "neco-ghc     - https://github.com/eagletmt/neco-ghc
+"vim-racket   - https://github.com/wlangstroth/vim-racket
 
 "Useful reference - https://jaxbot.me/articles/setting-up-vim-for-react-js-jsx-02-03-2015
