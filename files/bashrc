@@ -136,10 +136,6 @@ export phplog=/var/log/php_errors.log
 # My useful gulp boiler-plate repo
 export gbp=https://github.com/comraq/gulp-setup.git
 
-# Command-line shortcuts for executable programs
-export mpe3=$HOME/Downloads/master-pdf-editor-3/masterpdfeditor3
-export astd=$HOME/Downloads/android-studio/bin/studio.sh
-
 # Set ENV variable for chrome required for karma
 export CHROME_BIN=/usr/bin/chromium-browser
 
@@ -153,9 +149,12 @@ alias rld='here=$(pwd); . ~/.bashrc; cd $here'
 alias hask='stack ghc'
 alias sml='rlwrap sml'
 alias sghci='stack exec ghci'
+alias fzilla=$HOME/Downloads/FileZilla3/bin/filezilla
+alias pdf=$HOME/Downloads/master-pdf-editor-3/masterpdfeditor3
+alias astd="$HOME/Downloads/android-studio/bin/studio.sh &"
 
-# Sets the readline (terminal) mode to vi
-set -o vi
+# Sets default editor to vim
+export EDITOR=vim
 
 # PATHs
 PATH=$PATH:~/.composer/vendor/bin
