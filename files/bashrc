@@ -124,6 +124,7 @@ export and=$HOME/Documents/GitHub/Android
 export wws=$HOME/Documents/GitHub/WebWS
 export nws=$HOME/Documents/GitHub/WebWS/NodeWS
 export pws=$HOME/Documents/GitHub/WebWS/phpWS
+export hws=$HOME/Documents/GitHub/HaskellWS
 export swk=$HOME/Documents/SchoolWork
 export lrn=$HOME/Documents/SelfLearning
 export sws=$HOME/Documents/GitHub/SchoolWS
