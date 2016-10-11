@@ -266,6 +266,10 @@ let g:indentLine_color_term = 7 " See :help cterm-colors for more NR-8 Colors
 
 
 
+" vim-latex
+let g:tex_flavor='latex'
+
+
 "JSX Plugin   - https://github.com/mxw/vim-jsx
 "JS Plugin    - https://github.com/pangloss/vim-javascript
 "TS Plugin    - https://github.com/leafgarland/typescript-vim
