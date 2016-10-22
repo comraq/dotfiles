@@ -135,6 +135,7 @@ export acer=/media/adam/Acer/Users/adam
 export gnm=/usr/lib/node_modules
 export phplog=/var/log/php_errors.log
 
+
 # My useful gulp boiler-plate repo
 export gbp=https://github.com/comraq/gulp-setup.git
 
@@ -155,6 +156,10 @@ alias sghci='stack exec ghci'
 alias fzilla=$HOME/Downloads/FileZilla3/bin/filezilla
 alias pdf=$HOME/Downloads/master-pdf-editor-3/masterpdfeditor3
 alias astd="$HOME/Downloads/android-studio/bin/studio.sh &"
+
+# Allow node REPL to use readline settings
+export NODE_NO_READLINE=1
+alias node='rlwrap node'
 
 # Sets default editor to vim
 export EDITOR=vim
