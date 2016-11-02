@@ -263,6 +263,7 @@ endif
 " Indent Line
 let g:indentLine_fileTypeExclude = ['']
 let g:indentLine_color_term = 7 " See :help cterm-colors for more NR-8 Colors
+let g:indentLine_conceallevel = 0
 
 
 
