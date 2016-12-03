@@ -263,7 +263,7 @@ endif
 " Indent Line
 let g:indentLine_fileTypeExclude = ['']
 let g:indentLine_color_term = 7 " See :help cterm-colors for more NR-8 Colors
-let g:indentLine_conceallevel = 0
+let g:indentLine_concealcursor = ""
 
 
 
@@ -272,7 +272,7 @@ let g:indentLine_conceallevel = 0
 "TS Plugin    - https://github.com/leafgarland/typescript-vim
 "JsDOC Plugin - https://github.com/heavenshell/vim-jsdoc
 "Syntastic    - https://github.com/scrooloose/syntastic
-"HS Syntax    - https://github.com/urso/haskell_syntax.vim
+"Haskell-Vim  - https://github.com/neovimhaskell/haskell-vim
 "Indent Line  - https://github.com/Yggdroot/indentLine
 "vimproc      - https://github.com/Shougo/vimproc.vim
 "ghcmod-vim   - https://github.com/eagletmt/ghcmod-vim
