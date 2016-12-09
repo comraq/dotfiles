@@ -152,7 +152,7 @@ alias rld='here=$(pwd); . ~/.bashrc; cd $here'
 alias hask='stack ghc'
 alias sml='rlwrap sml'
 alias scheme='rlwrap scheme'
-alias sghci='stack exec ghci'
+alias sghci='stack ghci'
 alias fzilla=$HOME/Downloads/FileZilla3/bin/filezilla
 alias pdf=$HOME/Downloads/master-pdf-editor-3/masterpdfeditor3
 alias astd="$HOME/Downloads/android-studio/bin/studio.sh &"
@@ -168,13 +168,15 @@ export EDITOR=vim
 
 # PATHs
 PATH=$PATH:~/.composer/vendor/bin
+PATH=$HOME/local/bin:$PATH
+PATH=$HOME/.local/bin:$PATH
+# PATH=$PATH:~/.nix-profile/bin
+export PATH
+
+# Source nix environment
+. ~/.nix-profile/etc/profile.d/nix.sh
 
 export TDSDUMP=/tmp/freetds.log
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-export PATH=$HOME/local/bin:$PATH
-export PATH=$HOME/.local/bin:$PATH
-export PATH=$HOME/local/bin:$PATH
-export PATH=$HOME/local/bin:$PATH
-export PATH=$HOME/local/bin:$PATH
