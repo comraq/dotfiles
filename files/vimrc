@@ -272,6 +272,22 @@ let g:indentLine_concealcursor = ""
 
 
 
+" vim-latex
+" IMPORTANT: grep will sometimes skip displaying the file name if you
+" " search in a singe file. This will confuse Latex-Suite. Set your grep
+" " program to always generate a file-name.
+set grepprg=grep\ -nH\ $*
+
+" OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
+" 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
+" " The following changes the default filetype back to 'tex':
+let g:tex_flavor='latex'
+
+" Compile latex, make glossaries, then compile latex again
+nnoremap <leader>lm :!here=$(pwd); cd %:p:h; latex --interaction=nonstopmode %:p; makeglossaries %:p:r; latex --interaction=nonstopmode %:p; cd $here<CR><esc>
+
+
+
 "JSX Plugin   - https://github.com/mxw/vim-jsx
 "JS Plugin    - https://github.com/pangloss/vim-javascript
 "TS Plugin    - https://github.com/leafgarland/typescript-vim
@@ -283,5 +299,6 @@ let g:indentLine_concealcursor = ""
 "ghcmod-vim   - https://github.com/eagletmt/ghcmod-vim
 "neco-ghc     - https://github.com/eagletmt/neco-ghc
 "vim-racket   - https://github.com/wlangstroth/vim-racket
+"vim-latex    - https://github.com/vim-latex/vim-latex
 
 "Useful reference - https://jaxbot.me/articles/setting-up-vim-for-react-js-jsx-02-03-2015

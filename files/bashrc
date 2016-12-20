@@ -120,6 +120,7 @@ fi
 cd $HOME/Documents/GitHub
 
 export ws=$HOME/Documents/GitHub
+export not=$HOME/Documents/GitHub/ws/notes
 export and=$HOME/Documents/GitHub/Android
 export wws=$HOME/Documents/GitHub/WebWS
 export nws=$HOME/Documents/GitHub/WebWS/NodeWS
@@ -153,8 +154,9 @@ alias hask='stack ghc'
 alias sml='rlwrap sml'
 alias scheme='rlwrap scheme'
 alias sghci='stack ghci'
-alias fzilla=$HOME/Downloads/FileZilla3/bin/filezilla
-alias pdf=$HOME/Downloads/master-pdf-editor-3/masterpdfeditor3
+alias seghci='stack exec ghci'
+alias fzilla="$HOME/Downloads/FileZilla3/bin/filezilla &"
+alias pdf="$HOME/Downloads/master-pdf-editor-3/masterpdfeditor3 &"
 alias astd="$HOME/Downloads/android-studio/bin/studio.sh &"
 alias rst="source $HOME/.screenlayout/default_laptop_only.sh"
 alias python='python3'
@@ -170,7 +172,6 @@ export EDITOR=vim
 PATH=$PATH:~/.composer/vendor/bin
 PATH=$HOME/local/bin:$PATH
 PATH=$HOME/.local/bin:$PATH
-# PATH=$PATH:~/.nix-profile/bin
 export PATH
 
 # Source nix environment
