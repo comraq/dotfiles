@@ -286,6 +286,13 @@ let g:tex_flavor='latex'
 " Compile latex, make glossaries, then compile latex again
 nnoremap <leader>lm :!here=$(pwd); cd %:p:h; latex --interaction=nonstopmode %:p; makeglossaries %:p:r; latex --interaction=nonstopmode %:p; cd $here<CR><esc>
 
+" Compile latex to pdf
+nnoremap <leader>lpdf :TTarget<CR><BS><BS><BS>pdf<CR>
+
+let g:Tex_FormatDependency_pdf = 'dvi,ps,pdf'
+let g:Tex_CompileRule_ps = 'dvips -Ppdf -o $*.ps $*.dvi'
+let g:Tex_CompileRule_pdf = 'ps2pdf $*.ps'
+let g:Tex_SmartKeyQuote = 0
 
 
 "JSX Plugin   - https://github.com/mxw/vim-jsx

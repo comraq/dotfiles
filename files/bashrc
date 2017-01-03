@@ -179,5 +179,8 @@ export PATH
 
 export TDSDUMP=/tmp/freetds.log
 
+# Tex HOME Path
+export TEXMFHOME=$HOME/texmf
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
