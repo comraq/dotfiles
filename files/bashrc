@@ -156,10 +156,14 @@ alias scheme='rlwrap scheme'
 alias sghci='stack ghci'
 alias seghci='stack exec ghci'
 alias fzilla="$HOME/Downloads/FileZilla3/bin/filezilla &"
-alias pdf="$HOME/Downloads/master-pdf-editor-3/masterpdfeditor3 &"
+alias pdf="$HOME/Downloads/master-pdf-editor-3/masterpdfeditor3"
 alias astd="$HOME/Downloads/android-studio/bin/studio.sh &"
-alias rst="source $HOME/.screenlayout/default_laptop_only.sh"
+alias rst=". $HOME/.screenlayout/default_laptop_only.sh"
 alias python='python3'
+
+# Function to load screen layouts
+function scr { . "$HOME/.screenlayout/$1"; }
+export -f scr
 
 # Allow node REPL to use readline settings
 export NODE_NO_READLINE=1
