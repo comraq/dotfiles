@@ -160,6 +160,7 @@ alias pdf="$HOME/Downloads/master-pdf-editor-3/masterpdfeditor3"
 alias astd="$HOME/Downloads/android-studio/bin/studio.sh &"
 alias rst=". $HOME/.screenlayout/default_laptop_only.sh"
 alias python='python3'
+alias uniunzip='unzip -O cp-949'
 
 # Function to load screen layouts
 function scr { . "$HOME/.screenlayout/$1"; }
