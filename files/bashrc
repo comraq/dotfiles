@@ -177,6 +177,7 @@ export EDITOR=vim
 PATH=$PATH:~/.composer/vendor/bin
 PATH=$HOME/local/bin:$PATH
 PATH=$HOME/.local/bin:$PATH
+PATH=$JAVA_HOME/bin:$PATH
 export PATH
 
 # Source nix environment
