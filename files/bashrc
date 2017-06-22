@@ -188,5 +188,9 @@ export TDSDUMP=/tmp/freetds.log
 # Tex HOME Path
 export TEXMFHOME=$HOME/texmf
 
+# Mount and unmount android
+alias mand="jmtpfs /media/android"
+alias umand="fusermount -u /media/android"
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
