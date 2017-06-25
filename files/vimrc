@@ -295,6 +295,13 @@ let g:Tex_CompileRule_pdf = 'ps2pdf $*.ps'
 let g:Tex_SmartKeyQuote = 0
 
 
+
+
+" idris-vim
+let g:idris_indent_if = 2
+let g:idris_indent_case = 2
+
+
 "JSX Plugin   - https://github.com/mxw/vim-jsx
 "JS Plugin    - https://github.com/pangloss/vim-javascript
 "TS Plugin    - https://github.com/leafgarland/typescript-vim
@@ -307,5 +314,6 @@ let g:Tex_SmartKeyQuote = 0
 "neco-ghc     - https://github.com/eagletmt/neco-ghc
 "vim-racket   - https://github.com/wlangstroth/vim-racket
 "vim-latex    - https://github.com/vim-latex/vim-latex
+"idris-vim    - https://github.com/idris-hackers/idris-vim
 
 "Useful reference - https://jaxbot.me/articles/setting-up-vim-for-react-js-jsx-02-03-2015

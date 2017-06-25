@@ -192,5 +192,9 @@ export TEXMFHOME=$HOME/texmf
 alias mand="jmtpfs /media/android"
 alias umand="fusermount -u /media/android"
 
+# Wine 32-bit architecture
+export WINEPREFIX="$HOME/.wine-prefix32"
+export WINEARCH=win32
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
