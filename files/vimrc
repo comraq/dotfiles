@@ -25,6 +25,8 @@ set shiftwidth=2 "sw
 set autoindent "ai
 
 
+syntax on
+filetype on
 filetype plugin indent on
 
 set omnifunc=syntaxcomplete#complete
@@ -46,8 +48,9 @@ autocmd BufWinLeave * call clearmatches()
 
 "------- Custom Mappings -------"
 
-" Let backslash be leader
+" Let space be leader and localleader
 let mapleader = " "
+let maplocalleader = " "
 
 " Trims Trailing Whitespaces
 cnoremap trsp %s/\s\+$//g<cr>``
@@ -302,18 +305,26 @@ let g:idris_indent_if = 2
 let g:idris_indent_case = 2
 
 
-"JSX Plugin   - https://github.com/mxw/vim-jsx
-"JS Plugin    - https://github.com/pangloss/vim-javascript
-"TS Plugin    - https://github.com/leafgarland/typescript-vim
-"JsDOC Plugin - https://github.com/heavenshell/vim-jsdoc
-"Syntastic    - https://github.com/scrooloose/syntastic
-"haskell-vim  - https://github.com/neovimhaskell/haskell-vim
-"Indent Line  - https://github.com/Yggdroot/indentLine
-"vimproc      - https://github.com/Shougo/vimproc.vim
-"ghcmod-vim   - https://github.com/eagletmt/ghcmod-vim
-"neco-ghc     - https://github.com/eagletmt/neco-ghc
-"vim-racket   - https://github.com/wlangstroth/vim-racket
-"vim-latex    - https://github.com/vim-latex/vim-latex
-"idris-vim    - https://github.com/idris-hackers/idris-vim
+
+
+"latex-unicoder
+let g:unicoder_cancel_insert = 1
+inoremap <C-l> <Esc>:call unicoder#start(1)<CR>
+
+
+"JSX Plugin     - https://github.com/mxw/vim-jsx
+"JS Plugin      - https://github.com/pangloss/vim-javascript
+"TS Plugin      - https://github.com/leafgarland/typescript-vim
+"JsDOC Plugin   - https://github.com/heavenshell/vim-jsdoc
+"Syntastic      - https://github.com/scrooloose/syntastic
+"haskell-vim    - https://github.com/neovimhaskell/haskell-vim
+"Indent Line    - https://github.com/Yggdroot/indentLine
+"vimproc        - https://github.com/Shougo/vimproc.vim
+"ghcmod-vim     - https://github.com/eagletmt/ghcmod-vim
+"neco-ghc       - https://github.com/eagletmt/neco-ghc
+"vim-racket     - https://github.com/wlangstroth/vim-racket
+"vim-latex      - https://github.com/vim-latex/vim-latex
+"idris-vim      - https://github.com/idris-hackers/idris-vim
+"latex-unicoder - https://github.com/joom/latex-unicoder.vim
 
 "Useful reference - https://jaxbot.me/articles/setting-up-vim-for-react-js-jsx-02-03-2015
