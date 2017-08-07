@@ -24,6 +24,13 @@ set shiftwidth=2 "sw
 "Set Autoindent
 set autoindent "ai
 
+"Set Showcommand
+set showcmd "sc
+
+
+"Set Java indent to 4 spaces
+autocmd FileType java setlocal shiftwidth=4 tabstop=4
+
 
 syntax on
 filetype on
