@@ -163,6 +163,7 @@ alias hask='stack ghc'
 alias sml='rlwrap sml'
 alias scheme='rlwrap scheme'
 alias racket='rlwrap racket'
+alias sftp='rlwrap sftp'
 alias sghci='stack ghci'
 alias seghci='stack exec ghci'
 alias fzilla="$HOME/Downloads/FileZilla3/bin/filezilla &"
