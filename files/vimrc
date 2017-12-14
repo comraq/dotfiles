@@ -333,5 +333,6 @@ inoremap <C-l> <Esc>:call unicoder#start(1)<CR>
 "vim-latex      - https://github.com/vim-latex/vim-latex
 "idris-vim      - https://github.com/idris-hackers/idris-vim
 "latex-unicoder - https://github.com/joom/latex-unicoder.vim
+"AnsiEsc        - http://www.vim.org/scripts/script.php?script_id=302
 
 "Useful reference - https://jaxbot.me/articles/setting-up-vim-for-react-js-jsx-02-03-2015
