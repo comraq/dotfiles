@@ -172,6 +172,8 @@ alias astd="$HOME/Downloads/android-studio/bin/studio.sh &"
 alias rst=". $HOME/.screenlayout/default_laptop_only.sh"
 alias python='python3'
 alias uniunzip='unzip -O cp-949'
+alias utcdatetime="echo \"$(TZ=UTC date '+%Y-%m-%d %H:%M:%S') UTC\""
+
 
 # Function to load screen layouts
 function scr { . "$HOME/.screenlayout/$1"; }
