@@ -179,6 +179,11 @@ function utcdatetime {
   echo "$dt UTC"
 }
 
+# function to show all processes for a given port
+function proc_on_port {
+  lsof -i :$1
+}
+
 
 # Function to load screen layouts
 function scr { . "$HOME/.screenlayout/$1"; }
