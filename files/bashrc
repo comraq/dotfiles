@@ -125,7 +125,7 @@ if ! shopt -oq posix; then
 fi
 
 # Custom scripts
-cd $HOME/Documents/GitHub
+cd $HOME/Documents/
 
 export ws=$HOME/Documents/GitHub
 export not=$HOME/Documents/GitHub/ws/notes
@@ -139,7 +139,6 @@ export swk=$HOME/Documents/SchoolWork
 export lrn=$HOME/Documents/SelfLearning
 export sws=$HOME/Documents/GitHub/SchoolWS
 export plr=$HOME/Documents/pillr
-export dot=$HOME/.dotfiles
 export scr=$HOME/.screenlayout/
 export acer=/media/adam/Acer/Users/adam
 export gnm=/usr/lib/node_modules
@@ -158,7 +157,6 @@ alias :e=vim # Edit with vim
 alias :q=exit # Quit (emulating vim)
 alias chrome='/usr/bin/chromium-browser &'
 alias cprl='composer dumpautoload -o'
-alias rld='here=$(pwd); . ~/.bashrc; cd $here'
 alias hask='stack ghc'
 alias sml='rlwrap sml'
 alias scheme='rlwrap scheme'
@@ -184,10 +182,22 @@ function proc_on_port {
   lsof -i :$1
 }
 
-
 # Function to load screen layouts
 function scr { . "$HOME/.screenlayout/$1"; }
 export -f scr
+
+# Function to reload terminals with updated "bashrc/profiles"
+function rld {
+  here=$(pwd)
+  if [[ -f "$HOME/.profile" ]]; then
+    source $HOME/.profile
+  elif [[ -f "$HOME/.bash_profile" ]]; then
+    source $HOME/.bash_profile
+  else
+    source $HOME/.bashrc
+  fi
+  cd $here
+}
 
 # Allow node REPL to use readline settings
 export NODE_NO_READLINE=1
@@ -203,9 +213,7 @@ PATH=$HOME/.local/bin:$PATH
 PATH=$JAVA_HOME/bin:$PATH
 export PATH
 
-# Source nix environment
-. ~/.nix-profile/etc/profile.d/nix.sh
-
+# https://www.freetds.org/userguide/logging.htm
 export TDSDUMP=/tmp/freetds.log
 
 # Tex HOME Path
@@ -218,8 +226,6 @@ alias umand="fusermount -u /media/android"
 # Wine 32-bit architecture
 export WINEPREFIX="$HOME/.wine-prefix32"
 export WINEARCH=win32
-
-. ~/.profile
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
