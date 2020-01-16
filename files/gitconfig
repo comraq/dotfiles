@@ -3,3 +3,6 @@
 	name = comraq
 [core]
 	editor = vim
+
+[log]
+  decorate=auto

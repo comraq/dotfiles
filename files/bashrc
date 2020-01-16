@@ -158,7 +158,7 @@ alias :e=vim # Edit with vim
 alias :q=exit # Quit (emulating vim)
 alias chrome='/usr/bin/chromium-browser &'
 alias cprl='composer dumpautoload -o'
-alias rld='here=$(pwd); . ~/.bash_profile; cd $here'
+alias rld='here=$(pwd); . ~/.bashrc; cd $here'
 alias hask='stack ghc'
 alias sml='rlwrap sml'
 alias scheme='rlwrap scheme'
@@ -218,6 +218,8 @@ alias umand="fusermount -u /media/android"
 # Wine 32-bit architecture
 export WINEPREFIX="$HOME/.wine-prefix32"
 export WINEARCH=win32
+
+. ~/.profile
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
