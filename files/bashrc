@@ -125,8 +125,6 @@ if ! shopt -oq posix; then
 fi
 
 # Custom scripts
-cd $HOME/Documents/
-
 export ws=$HOME/Documents/GitHub
 export not=$HOME/Documents/GitHub/ws/notes
 export and=$HOME/Documents/GitHub/Android
@@ -138,9 +136,7 @@ export rws=$HOME/Documents/GitHub/RacketWS
 export swk=$HOME/Documents/SchoolWork
 export lrn=$HOME/Documents/SelfLearning
 export sws=$HOME/Documents/GitHub/SchoolWS
-export plr=$HOME/Documents/pillr
 export scr=$HOME/.screenlayout/
-export acer=/media/adam/Acer/Users/adam
 export gnm=/usr/lib/node_modules
 export phplog=/var/log/php_errors.log
 
