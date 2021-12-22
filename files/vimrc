@@ -11,9 +11,6 @@ set ignorecase "ic
 "Show line numbers at the very left of the vim buffer
 set number "nu
 
-"Apply auto line breaks at 80 characters and apply it with formatoptions
-set textwidth=76 "tw
-
 "Set Tab to 2 spaces
 set expandtab "et
 set tabstop=2 "ts
