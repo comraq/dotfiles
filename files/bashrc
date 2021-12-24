@@ -130,7 +130,6 @@ export not=$HOME/Documents/GitHub/ws/notes
 export and=$HOME/Documents/GitHub/Android
 export wws=$HOME/Documents/GitHub/WebWS
 export nws=$HOME/Documents/GitHub/WebWS/NodeWS
-export pws=$HOME/Documents/GitHub/WebWS/phpWS
 export hws=$HOME/Documents/GitHub/HaskellWS
 export rws=$HOME/Documents/GitHub/RacketWS
 export swk=$HOME/Documents/SchoolWork
@@ -138,21 +137,15 @@ export lrn=$HOME/Documents/SelfLearning
 export sws=$HOME/Documents/GitHub/SchoolWS
 export scr=$HOME/.screenlayout/
 export gnm=/usr/lib/node_modules
-export phplog=/var/log/php_errors.log
 
 
 # My useful gulp boiler-plate repo
 export gbp=https://github.com/comraq/gulp-setup.git
 
-# Set ENV variable for chrome required for karma
-export CHROME_BIN=/usr/bin/chromium-browser
-
 # Command-line shortcuts for executable programs
 # and Shortcut alias
 alias :e=vim # Edit with vim
 alias :q=exit # Quit (emulating vim)
-alias chrome='/usr/bin/chromium-browser &'
-alias cprl='composer dumpautoload -o'
 alias hask='stack ghc'
 alias sml='rlwrap sml'
 alias scheme='rlwrap scheme'
@@ -217,10 +210,6 @@ export TEXMFHOME=$HOME/texmf
 # Mount and unmount android
 alias mand="jmtpfs /media/android"
 alias umand="fusermount -u /media/android"
-
-# Wine 32-bit architecture
-export WINEPREFIX="$HOME/.wine-prefix32"
-export WINEARCH=win32
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
