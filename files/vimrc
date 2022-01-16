@@ -301,6 +301,12 @@ let g:Tex_CompileRule_ps = 'dvips -Ppdf -o $*.ps $*.dvi'
 let g:Tex_CompileRule_pdf = 'ps2pdf $*.ps'
 let g:Tex_SmartKeyQuote = 0
 
+" only uses lacheck, ignores chktex
+let g:syntastic_tex_checkers = ['lacheck']
+
+" https://github.com/vim-syntastic/syntastic/issues/2169
+let g:syntastic_tex_lacheck_quiet_messages = { 'regex': '\Vpossible unwanted space at' }
+
 
 
 
