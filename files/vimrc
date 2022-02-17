@@ -24,6 +24,18 @@ set autoindent "ai
 "Set Showcommand
 set showcmd "sc
 
+" Do no make vim more vi-compatible;
+set nocompatible
+
+" Search down into subfolders (recursively searches into subdirectories)
+" Provides tab-completion for all file-related tasks
+set path+=**
+
+" Display all matching files when we tab complete
+set wildmenu
+
+" Makes a ctags file for vim to navigate via tags
+command! MakeTags !ctags -R .
 
 "Set Java indent to 4 spaces
 autocmd FileType java setlocal shiftwidth=4 tabstop=4
