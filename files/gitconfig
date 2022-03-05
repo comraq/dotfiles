@@ -3,6 +3,7 @@
 	name = comraq
 [core]
 	editor = vim
+	excludesfile = /home/adam/.gitignore
 
 [log]
   decorate=auto

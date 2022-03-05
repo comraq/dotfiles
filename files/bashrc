@@ -200,6 +200,7 @@ PATH=$PATH:~/.composer/vendor/bin
 PATH=$HOME/local/bin:$PATH
 PATH=$HOME/.local/bin:$PATH
 PATH=$JAVA_HOME/bin:$PATH
+PATH=$HOME/.cabal/bin:$PATH
 export PATH
 
 # https://www.freetds.org/userguide/logging.htm
