@@ -1,9 +1,25 @@
 [user]
-	email = yinadam@hotmail.com
-	name = comraq
+  email = yinadam@hotmail.com
+  name = Adam Yin
 [core]
 	editor = vim
+	pager = less -FMRiX
 	excludesfile = /home/adam/.gitignore
+[color]
+	ui = auto
+[push]
+	default = simple
+[alias]
+	dag = log --graph --format='format:%C(yellow)%h%C(reset) %C(blue)\"%an\" <%ae>%C(reset) %C(magenta)%cr%C(reset)%C(auto)%d%C(reset)%n%s' --date-order
+[commit]
+  template=/home/adam/dotfiles/extras/message_template
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
 
 [log]
   decorate=auto
+

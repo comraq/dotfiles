@@ -1,5 +1,9 @@
 "------- Basic Settings -------"
 
+set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+set termencoding=utf-8
+set encoding=utf-8
+
 "Set the style for syntax highlighting to be suited for dark backgrounds
 set background=dark "bg
 
@@ -37,8 +41,16 @@ set wildmenu
 " Makes a ctags file for vim to navigate via tags
 command! MakeTags !ctags -R .
 
+"Ubuntu clipboard for '+' register as system clipboard, requires vim-gtk or vim-gnome
+"https://vim.fandom.com/wiki/Accessing_the_system_clipboard
+"https://stackoverflow.com/questions/23946289/vim-change-default-paste-register
+set clipboard^=unnamedplus
+set clipboard^=unnamed
+
 "Set Java indent to 4 spaces
 autocmd FileType java setlocal shiftwidth=4 tabstop=4
+autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 textwidth=140
+autocmd FileType cfg setlocal shiftwidth=4 tabstop=4 textwidth=120
 
 
 syntax on

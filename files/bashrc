@@ -188,6 +188,12 @@ function rld {
   cd $here
 }
 
+# Function to pull multiple files via adb
+# $1 - the path of files on android device to pull, supports glob and wildcards
+function adb_pull_glob {
+  adb shell "ls $1" | tr -d '\r' | sed -e 's/^\///' | xargs -n1 adb pull
+}
+
 # Allow node REPL to use readline settings
 export NODE_NO_READLINE=1
 alias node='rlwrap node'
@@ -215,3 +221,30 @@ alias umand="fusermount -u /media/android"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# Trims audio/video files by timestamp
+# $1 - start time stamp in hh:mm:ss[.xxx] format
+# $2 - end time stamp in hh:mm:ss[.xxx] format
+# $3 - audio/video filename
+#
+# outputs the trimmed file with same name but with ".trimmed" suffix appended
+function trim_media {
+  ffmpeg -ss "$1" -to "$2" -i "$3" -vcodec copy -acodec copy "$3.trimmed"
+}
+
+export JAVA_TOOLS_OPTIONS="-Dlog4j2.formatMsgNoLookups=true"
+export CPLUS_INCLUDE_PATH=/usr/local/include
+export LIBRARY_PATH=/usr/local/lib
+
+cleanup () {
+	echo BEFORE CLEANUP:
+	\df -h | \grep --color=auto /System/Volumes/Data | \grep --color=auto /dev
+	docker system prune -f
+	docker rm -vf $(docker ps -aq)
+	docker rmi -f $(docker images -aq)
+	npm cache clean --force
+	echo AFTER CLEANUP:
+	\df -h | \grep --color=auto /System/Volumes/Data | \grep --color=auto /dev
+}
+
+alias xcode='/Applications/Xcode-15.2.0.app/Contents/MacOS/Xcode'
