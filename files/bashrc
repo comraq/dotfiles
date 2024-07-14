@@ -227,9 +227,9 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # $2 - end time stamp in hh:mm:ss[.xxx] format
 # $3 - audio/video filename
 #
-# outputs the trimmed file with same name but with ".trimmed" suffix appended
+# outputs the trimmed file with same name but with "trimmed." prefix
 function trim_media {
-  ffmpeg -ss "$1" -to "$2" -i "$3" -vcodec copy -acodec copy "$3.trimmed"
+  ffmpeg -ss "$1" -to "$2" -i "$3" -vcodec copy -acodec copy "trimmed.$3"
 }
 
 export JAVA_TOOLS_OPTIONS="-Dlog4j2.formatMsgNoLookups=true"
