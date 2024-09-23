@@ -67,3 +67,40 @@ sudo ldconfig /usr/local/lib
 ```
 
 Original instructions [link](https://www.golinuxcloud.com/how-to-install-imagemagick-on-ubuntu/)
+
+---
+On mac, we also need to install via ttf.
+Similar to windows, we first patch the font and then use `mkttf` to build a ttf variant of the patched font. Using the same command:
+```
+./mkttf.sh ~/Downloads/terminus-font-4.49.1 4.49.1 terminus-font terminus_font_td1_ttf
+```
+
+To install the dependencies of `mkttf`:
+* brew install imagemagick
+* brew install potrace
+* brew install fontforge
+* mkitalic:
+  * download the bz2 file from [here](http://hp.vector.co.jp/authors/VA013651/freeSoftware/mkbold-mkitalic.html)
+  * extract the bz2
+  * run `make && make install` inside the extracted folder
+* to properly configure python for mkttf script:
+  * run the command `ln -s "$(brew --prefix)/bin/python"{3,}`, [reference](https://stackoverflow.com/questions/71468590/env-python-no-such-file-or-directory-when-building-app-with-xcode)
+
+Note that while running `mkttf` will output a lot of the following to the console:
+```
+WARNING: The convert command is deprecated in IMv7, use "magick" instead of "convert" or "magick convert"
+```
+* these can be ignored
+
+If trying to compile the fonts by source:
+The commands `make -j8` and `make install fontdir` are missing the following commands:
+* bdftopcf
+* mkfontscale
+* fc-cache
+
+These can be installed via macports:
+* installation for macports [link](https://www.macports.org/install.php)
+* `sudo port install bdftopcf`
+* `sudo port install mkfontscale`
+* `sudo port install fontconfig`
+* `sudo port install mkfontscale`

@@ -4,7 +4,7 @@
 [core]
 	editor = vim
 	pager = less -FMRiX
-	excludesfile = /home/adam/.gitignore
+	excludesfile = ~/.gitignore
 [color]
 	ui = auto
 [push]
@@ -12,7 +12,7 @@
 [alias]
 	dag = log --graph --format='format:%C(yellow)%h%C(reset) %C(blue)\"%an\" <%ae>%C(reset) %C(magenta)%cr%C(reset)%C(auto)%d%C(reset)%n%s' --date-order
 [commit]
-  template=/home/adam/dotfiles/extras/message_template
+  template=~/dotfiles/extras/message_template
 
 [filter "lfs"]
 	clean = git-lfs clean -- %f
